@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>F-1 Feeder</title>
+</head>
+
+<body ng-app="trainersBudgetApp" ng-controller="ratesController">
+<table>
+  <thead>
+  <tr><th colspan="4">Rates in database</th></tr>
+  </thead>
+  <tbody>
+  <tr ng-repeat="rate in ratesList">
+    <td>{{$index + 1}}</td>
+    <td>{{rate.rate_id}}</td>
+    <td>{{rate.rate}}</td>
+    <!--<td>{{rate.rate}}</td>-->
+  </tr>
+  </tbody>
+</table>
+<script src="assets/angular.min.js"></script>
+<script src="assets/angular-route.min.js"></script>
+<script src="app.js"></script>
+<!--<script src="js/services.js"></script>-->
+<script src="components/rates/ratesController.js"></script>
+<script src="components/rates/ratesService.js"></script>
+</body>
