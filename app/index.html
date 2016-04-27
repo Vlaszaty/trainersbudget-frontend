@@ -1,10 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>F-1 Feeder</title>
+  <title>Trainsersbudget</title>
 </head>
 
 <body ng-app="trainersBudgetApp" ng-controller="ratesController">
+
+<script src="http://code.angularjs.org/1.4.5/angular.min.js"></script>
+<script src="http://code.angularjs.org/1.4.5/angular-route.min.js"></script>
+<script src="http://code.angularjs.org/1.4.5/angular-resource.min.js"></script>
+
+<script src="components/rates/ratesController.js"></script>
+<script src="components/rates/ratesService.js"></script>
+
+
 <table>
   <thead>
   <tr><th colspan="4">Rates in database</th></tr>
@@ -12,16 +21,15 @@
   <tbody>
   <tr ng-repeat="rate in ratesList">
     <td>{{$index + 1}}</td>
-    <td>{{rate.rate_id}}</td>
+    <td>{{rate._id}}</td>
     <td>{{rate.rate}}</td>
     <!--<td>{{rate.rate}}</td>-->
   </tr>
   </tbody>
 </table>
-<script src="assets/angular.min.js"></script>
-<script src="assets/angular-route.min.js"></script>
+<!--<script src="assets/angular.min.js"></script>-->
+<!--<script src="assets/angular-route.min.js"></script>-->
 <script src="app.js"></script>
 <!--<script src="js/services.js"></script>-->
-<script src="components/rates/ratesController.js"></script>
-<script src="components/rates/ratesService.js"></script>
+
 </body>
